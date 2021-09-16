@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
-import { Htag, Tag } from '../components';
+import { useState } from 'react';
+import { Htag, Rating } from '../components';
 
 const Home: NextPage = (): JSX.Element => {
+  const [rating, setRating] = useState<number>(4);
   return (
     <>
       <Htag tag="h1">Header</Htag>
-      <Tag>Ghost</Tag>
-      <Tag color="primary">Ghost</Tag>
+      <Rating rating={rating} isEditable setRating={setRating} />
     </>
   );
 };
