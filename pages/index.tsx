@@ -12,9 +12,7 @@ const Home: NextPage<HomeProps> = ({ menu }): JSX.Element => {
     <>
       <Htag tag="h1">Header</Htag>
       <Rating rating={rating} isEditable setRating={setRating} />
-      <ul>
-        {menu && menu.map(item => <li key={item._id.secondCategory} >{item._id.secondCategory}</li>)}
-      </ul>
+
     </>
   );
 };
